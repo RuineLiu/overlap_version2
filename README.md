@@ -1,0 +1,2 @@
+# overlap_version2
+ There are many types of syntactic ambiguity problems, among which the problem of overlapping phrases arises very often. If there is ambiguity between two adjacent phrases of a phrase, there are three different ways of overlapping (left phrase, right phrase, neither). In my opinion, in order to be able to predict such labels, this can be seen as a nonlinear mathematical problem, and using deep learning to solve it is the optimal solution
