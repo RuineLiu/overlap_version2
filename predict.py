@@ -91,7 +91,6 @@ def evaluate_model(
     if device is None:
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    # === 加载数据（需要包含 label 列）===
     df = pd.read_csv(csv_path)
     X = df.drop(columns=["label"]).values.astype(np.float32)
     y_true = df["label"].values.astype(np.int64)
@@ -99,7 +98,6 @@ def evaluate_model(
     dataset = TensorDataset(torch.tensor(X))
     loader = DataLoader(dataset, batch_size=batch_size)
 
-    # === 初始化模型 ===
     model = StruGeneTransformer(
         input_dim=X.shape[1],
         embed_dim=64,
