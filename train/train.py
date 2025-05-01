@@ -40,7 +40,7 @@ def train_model(
     )
 
     val_df = pd.DataFrame(X_val, columns=df.columns[:-1])
-    val_df["label"] = y_val
+    val_df["label"] = y_val 
     val_df.to_csv(val_save_path, index=False, encoding="utf-8")
     print(f" 验证集已保存至: {val_save_path}")
 
